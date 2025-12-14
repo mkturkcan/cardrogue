@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dungeon Cards 3D Deluxe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="scanlines"></div>
+    <div id="ambient-particles"></div>
+
+    <div class="game-container" id="game-container">
+        <div class="stats-bar">
+            <div class="stats-row">
+                <div class="stat-group">
+                    <span style="color: #ef5350; text-shadow: 0 0 10px #ef5350;">HP</span>
+                    <span id="hp-display">15/15</span>
+                </div>
+                <div class="stat-group">
+                    <span style="color: #e65100; text-shadow: 0 0 10px #e65100;">ATK</span>
+                    <span id="atk-display">0</span>
+                </div>
+                <div class="stat-group">
+                    <span style="color: #42a5f5; text-shadow: 0 0 10px #42a5f5;">SHLD</span>
+                    <span id="shield-display">0</span>
+                </div>
+                <div class="stat-group">
+                    <span style="color: #fbc02d; text-shadow: 0 0 10px #fbc02d;">GOLD</span>
+                    <span id="gold-display">0</span>
+                </div>
+            </div>
+            <div class="xp-container" title="XP to Next Level">
+                <div class="xp-fill" id="xp-fill"></div>
+                <div class="xp-text" id="xp-text">LVL 1</div>
+            </div>
+        </div>
+
+        <div class="log-box" id="game-log">Select your class...</div>
+
+        <div class="grid-container">
+            <div class="card-grid" id="grid"></div>
+            <div class="area-title" id="area-title"></div>
+            <!-- In-game Tutorial Box -->
+            <div id="ingame-tutorial" class="ingame-tutorial hidden">
+                <span id="tut-content">Tip goes here</span>
+            </div>
+        </div>
+
+        <div style="font-size: 0.6rem; color: #888; margin-bottom:5px; text-align: center;">INVENTORY (Hover for info)
+        </div>
+        <div class="inventory-bar" id="inventory"></div>
+    </div>
+
+    <div id="global-tooltip"></div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <h2 style="color: #fbc02d; margin-bottom: 20px; font-size: 1.2rem; text-shadow: 0 2px 0 #000;"
+                id="modal-title">TITLE</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
